@@ -1,7 +1,7 @@
 # Marathon-Predictions
 Machine learning models that predict the finishing times of marathon runners. 
 
-So far I have created two models to predict the times of runners in the 2017 Berlin Marathon, based on their starting time, gender, age, and country. 
+So far I have created two models to predict the times of runners in the 2017 Berlin Marathon, based on their starting time, gender, age, and country: here's the Jupyter Notebook - https://github.com/NickVance/Marathon-Predictions/blob/master/Berlin%20Marathon%20Predictions.ipynb
 
 Future projects:
 - see how the models work at predicting the results of the 2018 Berlin Marathon
