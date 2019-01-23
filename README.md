@@ -2,7 +2,7 @@
 Machine learning models that predict the finishing times of marathon runners. 
 
 ## Inspiration
-In 2017, I watched thousands of runners competing in the Berlin Marathon. They varied widely in age and came from countries all over the world. While watching, it was easy to see that leaders were mostly Kenyans and Ethiopians in their 20s and 30s. At the back of the pack, finishing a few hours later, were older men and women, mostly from Europe. I started to wonder just how closely you could predict the finishing time of a runner just by knowing their age, gender, and country, so later that week I decided to take a look at the data.
+While watching the Berlin Marathon, I saw thousands of people of all ages from all around the world competing to run 42 kilometers as fast as they could. The top finishers were mostly Kenyans and Ethiopians in their 20s and 30s. At the back of the pack, finishing a few hours later, were older men and women, mostly from Europe. I started to wonder just how closely you could predict the finishing time of a runner just by knowing their age, gender, and country, so later that week I decided to take a look at the data.
 
 ## Raw Data
 The data comes from the results page of the official Berlin Marathon website: https://www.bmw-berlin-marathon.com/en/impressions/statistics-and-history/results-archive/. I used BeautifulSoup to scrape the data and then pandas to get it into usable form.
@@ -20,7 +20,7 @@ I used scikit-learn to create some machine learning models that would predict th
 - start time
 
 ## Results
-First I used a dummy regressor so I could get a baseline for my predictions - it just predicted the mean finishing time from the training data for everyone. It led to a mean absolute error of 36.6 minutes.
+First, I used a dummy regressor so I could get a baseline for my predictions - it just predicted the mean finishing time from the training data for everyone. It led to a mean absolute error of 36.6 minutes.
 Then I used GridSearchCV to find the best hyperparameters for a Ridge Regression, which led to a mean absolute error of 23.1 minutes when applied to the test set.
 Finally, I found a Random Forest Regression (again, using GridSearchCV to tune the hyperparameters) that had a mean absolute error of 22.5 minutes.
 
