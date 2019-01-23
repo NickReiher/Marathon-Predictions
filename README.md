@@ -19,6 +19,7 @@ I used scikit-learn to create some machine learning models that would predict th
 - country
 - start time
 
+## Results
 First I used a dummy regressor so I could get a baseline for my predictions - it just predicted the mean finishing time from the training data for everyone. It led to a mean absolute error of 36.6 minutes.
 Then I used GridSearchCV to find the best hyperparameters for a Ridge Regression, which led to a mean absolute error of 23.1 minutes when applied to the test set.
 Finally, I found a Random Forest Regression (again, using GridSearchCV to tune the hyperparameters) that had a mean absolute error of 22.5 minutes.
