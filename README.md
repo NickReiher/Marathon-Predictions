@@ -2,15 +2,15 @@
 Machine learning models that predict the finishing times of marathon runners. 
 
 ## Inspiration
-In 2017, I watched thousands of runners competing in the Berlin Marathon. They varied widely in age and came from countries all over the world. While watching, it was easy to see that the frontrunners came mostly from Kenya and Ethiopia, and were in their 20s or 30s. A few hours later, you noticed that the final finishers tended to be older. But there were definitely exceptions, so I started to wonder just how closely you could predict the finishing time of a runner just by knowing their age, gender, and country. That's when I decided to take a look at the data.
+In 2017, I watched thousands of runners competing in the Berlin Marathon. They varied widely in age and came from countries all over the world. While watching, it was easy to see that leaders were mostly Kenyans and Ethiopians in their 20s and 30s. At the back of the pack, finishing a few hours later, were older men and women, mostly from Europe. I started to wonder just how closely you could predict the finishing time of a runner just by knowing their age, gender, and country, so later that week I decided to take a look at the data.
 
 ## Raw Data
-The data comes from the official Berlin Marathon website. I used BeautifulSoup to scrape it, and then pandas to get it into usable form.
+The data comes from the results page of the official Berlin Marathon website: https://www.bmw-berlin-marathon.com/en/impressions/statistics-and-history/results-archive/. I used BeautifulSoup to scrape the data and then pandas to get it into usable form.
 
 ## Hypothesis
-I expected that for certain countries, it would be quite easy to predict the finishing times of runners. For example, there are very few amateur runners from Kenya or Ethiopia, so once you know their gender, you can narrow in on the range pretty narrowly. 
-For countries like Germany, which have a lot of participants, it would be a lot harder. There are runners of all ages and genders who are serious runners, but also lots who are running their first marathon and will be towards the back of the pack.
-While looking at the data, I saw that it was easy to find another feature that would likely correlate quite well with the finishing times: the amount of time after the gun that the runner crossed the starting line. In big races like this with tens of thousands of runners, it takes some runners almost an hour to cross the starting line! The organizers don't put the people in line randomly: the faster runners go to the front so they don't have to be passing people the entire time.
+I expected that for certain countries, it would be quite easy to predict the finishing times of runners. For example, there are very few amateur runners from Kenya or Ethiopia, so once you know their gender, you can narrow in on the range pretty closley 
+For countries like Germany, however, it would be a lot harder. There are runners of all ages and genders who are serious runners, but also lots who are running their first marathon and will be towards the back of the pack. There are also a lot more runners from Germany, so they will have a much greater influence on the average error.
+While looking at the data, I quickly found another feature that was easily availabe in the data and likely to correlate quite well with the finishing times: the amount of time after the gun that the runner crossed the starting line. In big races like this with tens of thousands of runners, it takes some runners almost an hour to cross the starting line! The organizers don't put the people in line randomly: the faster runners go to the front so they don't have to be passing people the entire time.
 
 ## Tools
 I used scikit-learn to create some machine learning models that would predict the finishing time based on the four features I mentioned earlier
